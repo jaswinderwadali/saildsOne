@@ -32,6 +32,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'POST /one':'FirstController.fetch_list',
+
   '/': {
     view: 'homepage'
   }
