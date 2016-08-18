@@ -44,10 +44,16 @@ module.exports = function(grunt) {
 	 * a Grunt task.
 	 */
 	function loadTasks(relPath) {
+		
 		return includeAll({
-			dirname: require('path').resolve(__dirname, relPath),
-			filter: /(.+)\.js$/
-		}) || {};
+                dirname: require('path').resolve(__dirname, relPath),
+                filter: /(.+)\.js$/,
+                excludeDirs :  /^\.(git|svn)$/
+        }) || {};
+		// return includeAll({
+		// 	dirname: require('path').resolve(__dirname, relPath),
+		// 	filter: /(.+)\.js$/
+		// }) || {};
 	}
 
 	/**
